@@ -1,0 +1,60 @@
+<div class="container">
+    <maya-slot name="target1"></maya-slot>
+    <maya-slot name="target2"></maya-slot>
+  </div>
+  
+  <div class="info-box">
+    <h3>What’s Happening Here?</h3>
+    <p>
+      This page demonstrates how the same MFE (<code>MultiKey</code>) can be instantiated
+      multiple times using different <strong>keys</strong> (e.g., <code>alpha</code> and <code>beta</code>).
+      Each instance is completely isolated in terms of data and state.
+    </p>
+    <p>
+      Try updating the name in either card. You’ll see that only the corresponding instance is updated —
+      proving that the <strong>store and view logic</strong> is scoped to the instance’s key.
+    </p>
+  </div>
+  
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 40px;
+      background: #f4f5f7;
+      flex-wrap: wrap;
+    }
+  
+    maya-slot {
+      flex: 1;
+      max-width: 400px;
+    }
+  
+    .info-box {
+      max-width: 800px;
+      margin: 40px auto 20px;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+  
+    .info-box h3 {
+      margin-bottom: 12px;
+      font-size: 20px;
+      color: #4f46e5;
+    }
+  
+    .info-box code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 0.9em;
+    }
+  </style>
+  

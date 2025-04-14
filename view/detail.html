@@ -1,0 +1,80 @@
+<div class="multikey-box">
+    <h2>MFE Instance</h2>
+  
+    <div class="row">
+      <label>Key:</label>
+      <span>{{key}}</span>
+    </div>
+  
+    <div class="row">
+      <label>Name:</label>
+      <span>{{name}}</span>
+    </div>
+  
+    <div class="row">
+      <label>Role:</label>
+      <span>{{role}}</span>
+    </div>
+  
+    <maya-input store="multikey" name="name" key="{{key}}">
+      <input class="styled-input" placeholder="Change name">
+    </maya-input>
+    <!-- <albert-uiinput store="multikey" key="{{key}}" name="name"></albert-uiinput> -->
+      
+  
+    <albert-uibutton color="neutral" variant="outline" store="multikey" key="{{key}}" operationId="updateName">
+      Update
+    </albert-uibutton>
+  </div>
+  
+  <style>
+    .multikey-box {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.2s ease;
+    }
+  
+    .multikey-box:hover {
+      transform: translateY(-4px);
+    }
+  
+    .row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #333;
+    }
+  
+    .styled-input {
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border 0.2s;
+    }
+  
+    .styled-input:focus {
+      border-color: #4f46e5;
+      outline: none;
+    }
+  
+    /* .styled-button {
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+    } */
+  </style>
+  
